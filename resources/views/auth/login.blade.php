@@ -27,7 +27,8 @@
             <p class="text-muted small">Sign in to your account</p>
         </div>
 
-        {{-- TODO: Display session error messages --}}
+        {{-- YES: Display session error messages --}}
+
 
         <form method="POST" action="{{ route('login') }}">
             @csrf

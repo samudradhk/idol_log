@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // TODO: Use Laravel Collection methods to complete the dashboard data.
+        // YES: Use Laravel Collection methods to complete the dashboard data.
 
         $activities = IdolActivity::all();
         $totalActivities = count($activities);

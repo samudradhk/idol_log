@@ -33,16 +33,27 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        // TODO: Implement Form Validation here.
+        // YES: Implement Form Validation here.
+        $validated = $request->validate([
+            'idol_name' => ['required', 'min:4'], 
+            'activity_name' => ['required'], 
+            'category' => ['required'],
+            'activity_date' => ['required'], 
+            'duration_hours' => ['required'], 
+            'viewer_count' => ['required'], 
+            'status' => ['required'],
+        ]);
 
-        IdolActivity::create($request->only([
-            'idol_name', 'activity_name', 'category',
-            'activity_date', 'duration_hours', 'viewer_count', 'status',
-        ]));
+        IdolActivity::create($validated);
 
-        // TODO: add session to show success message
+        // IdolActivity::create($request->only([
+        //     'idol_name', 'activity_name', 'category',
+        //     'activity_date', 'duration_hours', 'viewer_count', 'status',
+        // ]));
 
-        return redirect()->route('activities.index');
+        // YES: add session to show success message
+
+        return redirect()->route('activities.index')->with('success','success to insert');
     }
 
     /**
@@ -61,16 +72,26 @@ class ActivityController extends Controller
      */
     public function update(Request $request, IdolActivity $activity)
     {
-        // TODO: Implement Form Validation here.
+        // YES: Implement Form Validation here.
+        $validated = $request->validate([
+            'idol_name' => ['required', 'min:4'], 
+            'activity_name' => ['required'], 
+            'category' => ['required'],
+            'activity_date' => ['required'], 
+            'duration_hours' => ['required'], 
+            'viewer_count' => ['required'], 
+            'status' => ['required'],
+        ]);
+        $activity->update($validated);
 
-        $activity->update($request->only([
-            'idol_name', 'activity_name', 'category',
-            'activity_date', 'duration_hours', 'viewer_count', 'status',
-        ]));
+        // $activity->update($request->only([
+        //     'idol_name', 'activity_name', 'category',
+        //     'activity_date', 'duration_hours', 'viewer_count', 'status',
+        // ]));
 
-        // TODO: add session to show success message
+        // YES: add session to show success message
 
-        return redirect()->route('activities.index');
+        return redirect()->route('activities.index')->with('success','success to update');
     }
 
     /**
@@ -80,8 +101,8 @@ class ActivityController extends Controller
     {
         $activity->delete();
 
-        // TODO: add session to show success message
+        // YES: add session to show success message
 
-        return redirect()->route('activities.index');
+        return redirect()->route('activities.index')->with('success','success to delete');
     }
 }

@@ -20,7 +20,7 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        // TODO: Implement Form Validation and Authentication.
+        // YES: Implement Form Validation and Authentication.
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required','min:6'],
@@ -40,7 +40,7 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
-        // TODO: Implement Logout here.
+        // YES: Implement Logout here.
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();

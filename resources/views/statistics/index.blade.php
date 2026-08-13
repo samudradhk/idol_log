@@ -8,7 +8,7 @@
 </div>
 
 {{-- ============================================================ --}}
-{{-- TODO: Student Exercise                                       --}}
+{{-- YES: Student Exercise                                       --}}
 {{-- In StatisticsController@index, retrieve data using:          --}}
 {{--   $activities = IdolActivity::all();                         --}}
 {{-- Then compute each variable with Collection methods and pass  --}}
@@ -22,7 +22,7 @@
             <div class="card-body d-flex align-items-center justify-content-between">
                 <div>
                     <div class="fs-2 fw-bold">
-                        {{-- TODO: show total activities --}}
+                        {{-- YES: show total activities --}}
                         <span class="text-white-50">{{ $totalActivities }}</span>
                     </div>
                     <div class="small">Total Activities</div>
@@ -37,7 +37,7 @@
             <div class="card-body d-flex align-items-center justify-content-between">
                 <div>
                     <div class="fs-2 fw-bold">
-                        {{-- TODO: show total viewers --}}
+                        {{-- YES: show total viewers --}}
                         <span class="text-white-50">{{ $total_view }}</span>
                     </div>
                     <div class="small">Total Viewers</div>
@@ -52,7 +52,7 @@
             <div class="card-body d-flex align-items-center justify-content-between">
                 <div>
                     <div class="fs-2 fw-bold">
-                        {{-- TODO: Show upcoming event --}}
+                        {{-- YES: Show upcoming event --}}
                         <span class="text-white-50">{{ $upcoming }}</span>
                     </div>
                     <div class="small">Upcoming</div>
@@ -67,7 +67,7 @@
             <div class="card-body d-flex align-items-center justify-content-between">
                 <div>
                     <div class="fs-2 fw-bold">
-                        {{-- TODO: show average event duration --}}
+                        {{-- YES: show average event duration --}}
                         <span class="text-white-50">{{ round($avg_dur,2) }} hrs</span>
                     </div>
                     <div class="small">Avg. Duration</div>
@@ -88,17 +88,17 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <h5 class="mb-1">
-                    {{-- TODO: show the most viewed activity all the time --}}
+                    {{-- YES: show the most viewed activity all the time --}}
                     <span class="text-muted fst-italic">{{ $most->idol_name }} — {{ $most->activity_name }}</span>
                 </h5>
                 <span class="badge bg-secondary">
-                    {{-- TODO: show the most viewed category all the time --}}
+                    {{-- YES: show the most viewed category all the time --}}
                     {{ $most->category }}
                 </span>
             </div>
             <div class="col-md-6 text-md-end mt-2 mt-md-0">
                 <div class="fs-4 fw-bold text-info">
-                    {{-- TODO: show the top viewed all the time --}}
+                    {{-- YES: show the top viewed all the time --}}
                     <span class="text-muted">{{ $most->viewer_count }}</span>
                 </div>
                 <div class="small text-muted">viewers</div>
@@ -122,7 +122,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- TODO: show total of activity based on categories (use groupBy) --}}
+                    {{-- YES: show total of activity based on categories (use groupBy) --}}
                     @foreach (['Concert', 'Variety Show', 'Drama', 'Fan Meeting', 'Live Streaming'] as $cat)
                     <tr class="text-muted fst-italic">
                         <td>{{ $cat }}</td>

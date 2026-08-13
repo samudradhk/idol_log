@@ -1,6 +1,6 @@
 <?php
 
-// TODO: Implement Indonesian translations — Add key-value pairs for your localization strings here.
+// YES: Implement Indonesian translations — Add key-value pairs for your localization strings here.
 
 return [
     'hi'=>'2',

@@ -8,7 +8,7 @@ class StatisticsController extends Controller
 {
     public function index()
     {
-        // TODO: Student Exercise
+        // YES: Student Exercise
         // Implement Laravel Collection statistics here.
         $activities = IdolActivity::all();
         $totalActivities = count($activities);

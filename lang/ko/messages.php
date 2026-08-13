@@ -1,6 +1,6 @@
 <?php
 
-// TODO: Implement Korean translations — Add key-value pairs for your localization strings here.
+// YES: Implement Korean translations — Add key-value pairs for your localization strings here.
 
 return [
     'hi'=>'3',

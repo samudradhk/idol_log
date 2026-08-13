@@ -79,7 +79,7 @@
                 </ul>
 
                 <ul class="navbar-nav ms-auto align-items-center">
-                    {{-- TODO: Implement Localization (Language Switcher) --}}
+                    {{-- YES: Implement Localization (Language Switcher) --}}
                     {{-- Connect these buttons to change the application locale --}}
                     <li class="nav-item me-2">
                         <div class="btn-group btn-group-sm">
@@ -89,21 +89,25 @@
                         </div>
                     </li>
 
-                    {{-- TODO: Show Login/Logout based on Auth::check() --}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">
-                            <i class="bi bi-box-arrow-in-right"></i> Login
-                        </a>
-                    </li>
+                    {{-- YES: Show Login/Logout based on Auth::check() --}}
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">
+                                <i class="bi bi-box-arrow-in-right"></i> Login
+                            </a>
+                        </li>
+                    @endguest
                     {{-- Logout placeholder (hidden until auth is implemented) --}}
-                    {{-- <li class="nav-item">
-                        <form method="POST" action="{{ route('logout') }}" class="d-inline">
-                            @csrf
-                            <button type="submit" class="btn btn-link nav-link">
-                                <i class="bi bi-box-arrow-right"></i> Logout
-                            </button>
-                        </form>
-                    </li> --}}
+                    @auth
+                        <li class="nav-item">
+                            <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                                @csrf
+                                <button type="submit" class="btn btn-link nav-link">
+                                    <i class="bi bi-box-arrow-right"></i> Logout
+                                </button>
+                            </form>
+                        </li>
+                    @endauth
                 </ul>
             </div>
         </div>

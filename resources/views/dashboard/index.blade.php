@@ -22,7 +22,7 @@
 
 {{-- Summary Cards --}}
 <div class="row g-3 mb-4">
-    {{-- TODO: Count the total activites --}}
+    {{-- YES: Count the total activites --}}
     <div class="col-md-3">
         <div class="card text-white bg-primary border-0 shadow-sm">
             <div class="card-body d-flex align-items-center justify-content-between">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    {{-- TODO: Count the upcoming activites --}}
+    {{-- YES: Count the upcoming activites --}}
     <div class="col-md-3">
         <div class="card text-white bg-success border-0 shadow-sm">
             <div class="card-body d-flex align-items-center justify-content-between">
@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    {{-- TODO: Count the finished activites --}}
+    {{-- YES: Count the finished activites --}}
     <div class="col-md-3">
         <div class="card text-white bg-secondary border-0 shadow-sm">
             <div class="card-body d-flex align-items-center justify-content-between">
@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    {{-- TODO: Count the total viewers --}}
+    {{-- YES: Count the total viewers --}}
     <div class="col-md-3">
         <div class="card text-white bg-info border-0 shadow-sm">
             <div class="card-body d-flex align-items-center justify-content-between">
